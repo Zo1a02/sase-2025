@@ -8,16 +8,23 @@ import { RouterLink } from 'vue-router';
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <RouterLink class="navbar-brand" to="/">Navbar</RouterLink>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <RouterLink class="nav-link active" aria-current="page" to="/home">Home</RouterLink>
             </li>
-              <RouterLink class="nav-link" to="/test">Link</RouterLink>
+            <li>
+              <RouterLink class="nav-link" aria-current="page" to="/test">Link</RouterLink>
+            </li>
           </ul>
-        </div>
+          <ul class="navbar-nav me-auto">
+            <RouterLink class="nav-link" aria-current="page" to="/login" >Login</RouterLink><i class="fa-solid fa-right-to-bracket"></i>
+          </ul>
       </div>
     </nav>
+    <div class="cintainer">
+      <input class="btn btn-primary" type="submit" value="Submit"></input>
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
