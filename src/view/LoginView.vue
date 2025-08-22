@@ -30,8 +30,7 @@ function doLogin(e: Event) {
     <div class="custom-form card">
         <div class="card-body">
             <div class="text-center">
-                <h3>Login to finish tasks</h3>
-                <p>Finish him</p>
+                <h3>Login to pick up tasks</h3>
             </div>
             <form v-on:submit="e => doLogin(e)">
                 <div class="mb-3">
@@ -47,3 +46,13 @@ function doLogin(e: Event) {
         </div>
     </div>
 </template>
+
+<style>
+.custom-form{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width:400px;
+}
+</style>
