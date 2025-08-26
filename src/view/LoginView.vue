@@ -6,16 +6,16 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 
-const email = ref<string>('')
+const username = ref<string>('')
 const password = ref<string>('')
 const router = useRouter()
 
 function doLogin(e: Event) {
     e.preventDefault()
 
-    if (email.value == '' || password.value == '') return
+    if (username.value == '' || password.value == '') return
 
-    MainService.login(email.value, password.value)
+    MainService.login(username.value, password.value)
         .then(rsp => {
             AuthService.createAuth(rsp.data)
             router.push('/')
@@ -34,8 +34,8 @@ function doLogin(e: Event) {
             </div>
             <form v-on:submit="e => doLogin(e)">
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address:</label>
-                    <input type="email" class="form-control" id="email" v-model="email">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="username" class="form-control" id="username" v-model="username">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password:</label>

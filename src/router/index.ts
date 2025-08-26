@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/view/HomeView.vue'
 import LoginView from '@/view/LoginView.vue'
-import Taskview from '@/view/Taskview.vue'
+import Taskview from '@/view/TaskView.vue'
 import UserView from '@/view/UserView.vue'
 
 

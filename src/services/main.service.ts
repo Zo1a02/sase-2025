@@ -2,7 +2,7 @@ import axios, { AxiosError, type AxiosResponse } from "axios"
 import { AuthService } from "./auth.service"
 
 const client = axios.create({
-    baseURL: 'https://localhost:5000/api',
+    baseURL: 'https://127.0.0.1:3000/api',
     headers: {
         'Accept': 'application/json'
     },
@@ -13,12 +13,12 @@ const client = axios.create({
 
 export class MainService {
 
-    static async login(email: string, password: string) {
+    static async login(username: string, password: string) {
         return await client.request({
             url: '/user/login',
             method: 'post',
             data: {
-                email: email,
+                username: username,
                 password: password
             }
         })
